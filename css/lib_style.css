@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    scroll-behavior: smooth;
+    animation-name: dive;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+
+}
+@keyframes dive{
+    0%{
+        top: 600px;
+        opacity: 0.4;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+/* Navbar Styling */
+#navbar{
+    
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.356);
+
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+/* Logo and Nav list */
+#logo img{
+    height: 60px;
+    margin-left: 10px;
+}
+#navbar ul{
+    display: flex;
+    list-style-type: none;
+    margin-left: 10px;
+}
+#navbar ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    
+}
+/* Home Section */
+
+#home{
+    
+    display: flex;
+    flex-direction: column;
+    padding: 5px 200px;
+    align-items: center;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    
+}
+#home::before{
+    content: "";
+    background: url('../pic/Lib2.jpg') no-repeat center center/cover;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    background-attachment: fixed;
+}
+#home .btn-primary{
+    margin-top: 30px;
+}
+
+/* Section Browse subjects */
+.bhula{
+    margin-top: 50px;
+}
+
+#browse{
+    margin: 0px 5px;
+    display: flex;
+    background-color: rgb(241, 229, 229);
+    border: 2px solid coral;
+    border-radius: 10px;
+    box-shadow: -5px -5px 5px #883b8c82;
+    justify-content: center;
+    
+
+}
+.subject{
+    text-align: center;
+    
+    
+    margin: 10px 5px;
+}
+.subject img{
+    display: block;
+    margin: auto;
+    width: 100px;
+
+}
+
+
+
+
+/* Animation section */
+#art,#History,#Business{
+    position: relative;
+    animation-name: updown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#science,#Biography,#Novel{
+    position: relative;
+    animation-name: downup;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes updown{
+    0%{
+        top: 0px;
+        
+    }
+    25%{
+        top: -10px;
+    }
+    50%{
+        top: 0px;
+       
+    }
+    75%{
+        top: 10px;
+    }
+    100%{
+        top: 0px;
+    }
+
+}
+
+@keyframes downup{
+    0%{
+        top: 0px;
+    }
+    25%{
+        top: 10px;
+    }
+    50%{
+        top: 0px;
+    }
+    75%{
+        top: -10px;
+    }
+    100%{
+        top: 0px;
+    }
+
+}
+
+/* #art:hover,#science:hover,#History:hover,
+#Biography:hover,#Business:hover,#Novel:hover{
+    animation: none;
+} */
+
+
+/* Contact Section */
+#contact h1{
+    padding-top: 120px;
+}
+#contact::before{
+    content: "";
+    background: url(../pic/whitephone.png)no-repeat center center/cover;
+    position: absolute;
+    height: 179%;
+    width: 95%;
+    z-index: -1;
+    opacity: 1;
+    right: 168px;
+}
+.contactus{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 395px;
+}
+.contactus input[type='text'],
+.contactus input[type='email'],
+.contactus input[type='number'],
+.contactus textarea,label{
+    border-radius: 10px;
+    padding: 5px;
+}
+.contactus .btn-primary{
+    margin-top: 15px;
+}
+/* Utility Classes */
+h1{
+    
+}
+.H-brand{
+    
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Encode Sans SC', sans-serif;
+    padding: 10px;
+    font-size: 60px;
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    z-index: -1;
+}
+@keyframes slide{
+    0%{
+        top: -200px;
+        opacity: 0.5;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+.H-primary{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Encode Sans SC', sans-serif;
+    padding: 10px;
+    color: coral;
+    text-shadow: 2px 2px 8px rgba(247, 10, 255, 0.541);
+    
+}
+.p-primary{
+    font-family: 'Work Sans', sans-serif;
+}
+.btn-primary{
+    padding: 10px 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 2px solid white;
+    background-color: coral;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px #edff00e0 inset;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.btn-primary:hover{
+    cursor: pointer;
+    background-color: rgb(255, 68, 0);
+
+}
+
+
+@media only screen and (max-width: 1165px) {
+    #navbar {
+        justify-content: center;
+    }
+    #home::before{
+        
+        width: 100%;
+        
+    }
+  }
